@@ -2,18 +2,18 @@ import pandas as pd
 
 data=pd.read_csv("bank_transactions.csv")
 def generalize_age(age):
-    if age < 15:
-        return "10-15";
-    elif age < 20:
-        return "15-20";
-    elif age < 25:
-        return "20-25";
-    elif age < 30:
-        return "25-30";
-    elif age < 35:
-        return "30-35";
+    if age < 35:
+        return "35-";
+    elif age < 40:
+        return "35-39";
+    elif age < 45:
+        return "40-44";
+    elif age < 50:
+        return "45-49";
+    elif age < 55:
+        return "50-54";
     else:
-        return "35+";
+        return "55+";
 
 
 if __name__ == "__main__":
