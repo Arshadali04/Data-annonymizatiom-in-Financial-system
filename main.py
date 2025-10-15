@@ -1,7 +1,7 @@
 import pandas as pd
 
 K = 10
-NUMERical_QIS = ['age']
+numerical_QIS = ['age']
 SENSITIVE_ATTRIBUTE = 'Account_Balance'
 
 def anonymize_with_partitioning(df, k):
