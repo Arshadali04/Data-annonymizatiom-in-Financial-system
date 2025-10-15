@@ -62,7 +62,7 @@ if __name__ == "__main__":
         
         print("Starting data anonymization process using partitioning...")
         print(f"Target: {K}-anonymity")
-        print(f"Quasi-Identifiers: {NUMERical_QIS}")
+        print(f"Quasi-Identifiers: {numerical_QIS}")
         print("-" * 30)
 
         anonymized_data = anonymize_with_partitioning(data, K)
