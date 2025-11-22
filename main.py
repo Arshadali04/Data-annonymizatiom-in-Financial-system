@@ -231,24 +231,8 @@ def anonymize_bankdetails(df, k=K):
         return None
 
 if __name__ == "__main__":
-    try:
-        data = pd.read_csv("bankdetails.csv")
-    except FileNotFoundError:
-        print("Error: 'bankdetails.csv' not found in the current directory.")
-    except pd.errors.EmptyDataError:
-        print("Error: 'bankdetails.csv' is empty or invalid.")
-    except pd.errors.ParserError as e:
-        print(f"Error parsing 'bankdetails.csv': {e}")
-    except Exception as e:
-        print(f"Unexpected error while reading CSV: {e}")
-    else:
-        anonymized = anonymize_bankdetails(data, K)
-        if anonymized is not None:
-            try:
-                output_filename = "anonymized_bankdetails.csv"
-                anonymized.to_csv(output_filename, index=False)
-                print(anonymized.head())
-            except PermissionError:
-                print("Error: Permission denied while writing 'anonymized_bankdetails.csv'. Close the file if it is open.")
-            except Exception as e:
-                print(f"Unexpected error while writing output CSV: {e}")
+    data["new_age"] = data["age"].apply(generalize_age)
+    data["diff_age"]=data["new_age"].astype(int)-data["age"].astype(int)
+    data.to_csv("anonymized_bank_transactions.csv", index=False)
+    print("Anonymization complete. Output saved to anonymized_bank_transactions.csv")
+ 
