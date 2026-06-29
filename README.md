@@ -1,4 +1,3 @@
-Here is the **README in plain text format** exactly as you asked — no markdown formatting, no special characters, just clean text you can paste anywhere:
 
 ---
 
