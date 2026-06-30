@@ -393,6 +393,8 @@ def anonymize_dataframe(df: pd.DataFrame, config: PrivacyConfig) -> Tuple[pd.Dat
         raise ValueError("l must be a positive integer")
 
     original = _normalize_dataframe(df)
+    if original.empty:
+        raise ValueError("Input dataset is empty")
 
     required = [AGE_COL, BAL_COL]
     missing = [col for col in required if col not in original.columns]
