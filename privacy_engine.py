@@ -142,6 +142,20 @@ def _fake_name(val: object) -> object:
 
 
 def _mask_phone(val: object) -> object:
+    """ 
+    Masks a phone number while preserving the last 4 digits.
+
+    Purpose:
+        Protects personally identifiable information (PII)
+        while retaining partial information for verification.
+
+    Example:
+        9876543210 -> ******3210
+
+    Returns:
+        Masked phone number as a string.
+    """
+        
     if pd.isna(val):
         return pd.NA
     digits = "".join(ch for ch in str(val) if ch.isdigit())
@@ -151,6 +165,19 @@ def _mask_phone(val: object) -> object:
 
 
 def _tokenize_email(val: object) -> object:
+    """
+    Replaces an email address with a unique token.
+
+    Purpose:
+        Prevents exposure of real email addresses while
+        maintaining consistency across records.
+
+    Example:
+        arshad@gmail.com -> email_000001
+
+    Returns:
+        Tokenized email identifier.
+    """
     if pd.isna(val):
         return pd.NA
     raw = str(val).strip().lower()
@@ -162,6 +189,19 @@ def _tokenize_email(val: object) -> object:
 
 
 def map_city_to_state(city: object) -> object:
+    """
+    Generalizes city information into state-level locations.
+
+    Purpose:
+        Reduces location granularity to improve privacy.
+
+    Example:
+        Bengaluru -> Karnataka
+        Mumbai -> Maharashtra
+
+    Returns:
+        Corresponding state name.
+    """
     if pd.isna(city):
         return pd.NA
     normalized = str(city).strip().lower()
