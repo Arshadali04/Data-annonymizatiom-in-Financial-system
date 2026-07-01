@@ -328,7 +328,7 @@ If you do not yet have a license file, add one before open-source distribution.
 
 ## 👨‍💻 Author
 
-**Arshad Athani**  
+**Arshadali Athani**  
 **Role:** Computer Science Engineering Student  
 **Interests:** Data Analytics, Data Privacy, Cybersecurity
 
