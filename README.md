@@ -50,6 +50,29 @@ Financial datasets often contain personally identifiable information (PII) and s
 
 ---
 
+## 📊 Processing Statistics
+
+The anonymization pipeline supports:
+
+- 10,000+ financial records processed in a single workflow.
+- 8+ protected sensitive attributes, including identifiers and contact fields.
+- K-Anonymity with a default value of K=10.
+- L-Diversity with a default value of L=2.
+- SHA-256 based pseudonymization for high-risk identifiers.
+- Automated privacy and utility reporting for each anonymization run.
+
+### Reporting Coverage
+
+- Total records processed.
+- Records modified during anonymization.
+- Sensitive fields protected.
+- Re-identification risk reduction percentage.
+- K-Anonymity compliance status.
+- L-Diversity compliance status.
+- Utility preservation metrics for balance, age, and gender distributions.
+
+---
+
 ## 🏗️ System Architecture
 
 ```mermaid
