@@ -107,6 +107,15 @@ def _mask_ifsc(val: object) -> object:
         return "*" * len(raw)
     return raw[:4] + "*" * (len(raw) - 4)
 
+def _is_valid_aadhaar(val: object) -> bool:
+    """
+    Validates whether an Aadhaar number contains exactly 12 digits.
+    """
+    if pd.isna(val):
+        return False
+
+    digits = "".join(ch for ch in str(val) if ch.isdigit())
+    return len(digits) == 12
 
 def _hash_digits(val: object) -> object:
     if pd.isna(val):
@@ -463,8 +472,10 @@ def anonymize_dataframe(df: pd.DataFrame, config: PrivacyConfig) -> Tuple[pd.Dat
         working[ACC_COL] = working[ACC_COL].apply(_hash_digits)
 
     if AADHAAR_COL in working.columns:
-        working[AADHAAR_COL] = working[AADHAAR_COL].apply(_hash_digits)
-
+        working[AADHAAR_COL] = working[AADHAAR_COL].apply(
+            lambda x: _hash_digits(x) if _is_valid_aadhaar(x) else "INVALID_AADHAAR"
+        )
+        
     if UPI_COL in working.columns:
         working[UPI_COL] = working[UPI_COL].apply(_pseudonymize_upi)
 
