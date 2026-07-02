@@ -431,7 +431,21 @@ def _calculate_utility_report(original_df: pd.DataFrame, anonymized_df: pd.DataF
                 "utility_preservation_pct": round(preservation, 2),
             }
         )
+    if report_rows:
+        avg_utility = sum(
+        row["utility_preservation_pct"]
+        for row in report_rows
+        if isinstance(row.get("utility_preservation_pct"), (int, float))
+    ) / len(report_rows)
 
+        report_rows.append(
+        {
+            "metric": "overall_utility_score",
+            "original": "-",
+            "anonymized": "-",
+            "utility_preservation_pct": round(avg_utility, 2),
+        }
+    )
     return pd.DataFrame(report_rows)
 
 
