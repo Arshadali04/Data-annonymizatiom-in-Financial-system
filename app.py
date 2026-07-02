@@ -14,6 +14,13 @@ st.caption("Placement-ready privacy pipeline with k-anonymity, l-diversity, and 
 uploaded_file = st.file_uploader("Upload input CSV", type=["csv"])
 privacy_level = st.selectbox("Select privacy level", options=["Low", "Medium", "High"], index=1)
 
+if privacy_level == "Low":
+    st.info("Low Privacy: K=5, L=2, Balance Range=5000")
+elif privacy_level == "Medium":
+    st.info("Medium Privacy: K=10, L=2, Balance Range=10000")
+else:
+    st.info("High Privacy: K=15, L=3, Balance Range=20000")
+
 if uploaded_file is not None:
     try:
         original_df = pd.read_csv(uploaded_file)
