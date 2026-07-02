@@ -50,6 +50,24 @@ Financial datasets often contain personally identifiable information (PII) and s
 
 ---
 
+## 🛡️ Protected Data Fields
+
+The system automatically protects the following sensitive fields during anonymization:
+
+- Name
+- Phone Number
+- Email Address
+- Aadhaar Number
+- Account Number
+- UPI ID
+- IFSC Code
+- City / Location
+- Account Balance
+
+Protection methods include masking, tokenization, pseudonymization, hashing, and generalization.
+
+---
+
 ## 📊 Processing Statistics
 
 The anonymization pipeline supports:
