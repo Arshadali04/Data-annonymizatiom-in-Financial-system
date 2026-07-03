@@ -5,7 +5,7 @@ from io import StringIO
 from pathlib import Path
 import hashlib
 from typing import Dict, List, Tuple
-
+from datetime import datetime
 import pandas as pd
 from faker import Faker
 
@@ -373,6 +373,7 @@ def _calculate_privacy_metrics(original_df: pd.DataFrame, anonymized_df: pd.Data
         "l_diversity_required": int(l_report["l_value"].iloc[0]) if not l_report.empty else DEFAULT_L,
         "l_diversity_compliant": l_compliance,
         "l_diversity_class_compliance_pct": round(compliant_ratio, 2),
+        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
     return pd.DataFrame([metrics])
 
