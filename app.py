@@ -44,6 +44,16 @@ if uploaded_file is not None:
 
         st.success("Anonymization completed")
 
+        st.info(
+        """
+            Generated Files:
+            - anonymized_bankdetails.csv
+            - privacy_metrics.csv
+            - data_utility_report.csv
+            - l_diversity_report.csv
+        """
+        )
+
         st.subheader("Anonymized Data Preview")
         st.dataframe(anonymized_df.head(20), use_container_width=True)
 
