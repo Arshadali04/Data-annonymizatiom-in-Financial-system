@@ -312,13 +312,21 @@ Example metrics typically reported:
 
 ---
 
-## 🔭 Future Enhancements
+## ⚠️ Current Limitations
 
-- Add **t-closeness** and **differential privacy**.
-- Introduce **keyed hashing/salting** with secure secret management.
-- Add **unit and integration tests** with CI pipeline.
-- Add policy templates for GDPR/DPDP-aligned controls.
-- Extend dashboard with trend charts and dataset drift checks.
+- Supports structured CSV datasets only.
+- City-to-state mapping is limited to predefined locations.
+- Differential Privacy is not yet implemented.
+- T-Closeness validation is not currently supported.
+- Large datasets may require additional optimization.
+
+## 🔮 Future Improvements
+
+- Differential Privacy
+- T-Closeness
+- Secure key management
+- Database integration
+- Real-time anonymization APIs
 
 ---
 
