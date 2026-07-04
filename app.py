@@ -58,6 +58,16 @@ if uploaded_file is not None:
         st.dataframe(anonymized_df.head(20), use_container_width=True)
 
         st.subheader("Privacy Metrics Dashboard")
+        st.write("### Active Privacy Configuration")
+
+        st.write(
+            {
+                "Privacy Level": config.privacy_level,
+                "K-Anonymity": config.k,
+                "L-Diversity": config.l,
+                "Balance Range Step": config.balance_step,
+            }
+        )
         metrics = metrics_df.iloc[0].to_dict()
 
         col1, col2, col3 = st.columns(3)
