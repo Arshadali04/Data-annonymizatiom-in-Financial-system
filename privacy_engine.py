@@ -374,6 +374,7 @@ def _calculate_privacy_metrics(original_df: pd.DataFrame, anonymized_df: pd.Data
         "l_diversity_compliant": l_compliance,
         "l_diversity_class_compliance_pct": round(compliant_ratio, 2),
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "overall_compliance": ("PASS" if k_compliance and l_compliance else "FAIL"),
     }
     return pd.DataFrame([metrics])
 
