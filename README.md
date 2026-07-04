@@ -211,6 +211,29 @@ streamlit run app.py
 5. Review anonymized preview, privacy metrics, and utility report.
 6. Download anonymized dataset and generated reports.
 
+## 📥 Input Dataset Requirements
+
+Your input CSV dataset must include the fields needed by the anonymization and validation pipeline.
+
+### Required Fields
+
+- Age
+- Balance_INR
+
+### Recommended Fields
+
+- Name
+- Phone
+- Email
+- Aadhaar_Number
+- Account_Number
+- UPI_ID
+- IFSC
+- City
+- Gender
+
+Datasets missing Age or Balance_INR will fail validation.
+
 ---
 
 ## 🔄 Before vs After Examples
