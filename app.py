@@ -32,6 +32,8 @@ if uploaded_file is not None:
     st.write(f"Total Records Uploaded: {len(original_df)}")
     st.write(f"Total Columns: {len(original_df.columns)}")
     st.dataframe(original_df.head(20), use_container_width=True)
+    st.write("### Available Columns")
+    st.write(list(original_df.columns))
 
     if st.button("Run Anonymization", type="primary"):
         config = PrivacyConfig.from_level(privacy_level.lower())
