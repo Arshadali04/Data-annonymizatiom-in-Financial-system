@@ -275,6 +275,18 @@ Replaces identifiers such as emails with stable surrogate tokens while preservin
 Transforms identifiers via SHA-256-based logic to reduce direct exposure while retaining analytical linkage.
 </details>
 
+## 🧠 Privacy Techniques Used
+
+| Technique | Purpose |
+|------------|------------|
+| K-Anonymity | Prevent identity disclosure |
+| L-Diversity | Prevent attribute disclosure |
+| Masking | Hide sensitive values |
+| Tokenization | Replace identifiers with tokens |
+| Pseudonymization | Protect unique identifiers |
+| Generalization | Reduce data granularity |
+| SHA-256 Hashing | Secure identifier transformation |
+
 ---
 
 ## 🖼️ Screenshots
