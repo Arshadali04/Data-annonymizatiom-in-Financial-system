@@ -46,6 +46,18 @@ if uploaded_file is not None:
 
         st.success("Anonymization completed")
 
+        st.write("### Processing Summary")
+
+        st.success(
+            f"""
+        Records Processed: {len(original_df)}
+
+        Privacy Level: {privacy_level}
+
+        Reports Generated: 4
+        """
+        )
+        
         st.info(
         """
             Generated Files:
