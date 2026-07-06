@@ -30,6 +30,12 @@ if uploaded_file is not None:
 
     st.subheader("Original Data Preview")
     st.write(f"Total Records Uploaded: {len(original_df)}")
+    st.write("### Data Quality Summary")
+
+    missing_values = original_df.isnull().sum().sum()
+
+    st.write(f"Missing Values Found: {missing_values}")
+    st.write(f"Duplicate Records: {original_df.duplicated().sum()}")
     st.write(f"Total Columns: {len(original_df.columns)}")
     st.dataframe(original_df.head(20), use_container_width=True)
     st.write("### Available Columns")
