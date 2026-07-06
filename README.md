@@ -133,6 +133,29 @@ flowchart TD
 5. Privacy and utility reports are generated.
 6. Outputs are visualized and exported through Streamlit.
 
+## 🔄 System Workflow
+
+```mermaid
+flowchart TD
+    A[Input CSV] --> B[Data Cleaning and Normalization]
+    B --> C[K-Anonymity Processing]
+    C --> D[Generalization Layer]
+    D --> E[Masking and Pseudonymization]
+    E --> F[L-Diversity Validation]
+    F --> G[Privacy Metrics Generation]
+    G --> H[Utility Analysis]
+    H --> I[Output Reports and Dashboard]
+```
+
+### Workflow Summary
+1. Input CSV data is loaded into the pipeline.
+2. Records are cleaned and normalized for consistent processing.
+3. K-anonymity is applied to reduce re-identification risk.
+4. Sensitive values are generalized, masked, or pseudonymized.
+5. L-diversity is validated to check sensitive attribute variation.
+6. Privacy metrics and utility analysis are generated.
+7. Final reports and dashboard outputs are produced.
+
 ---
 
 ## 🗂️ Project Structure
