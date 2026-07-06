@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 import streamlit as st
-
+import time
 from privacy_engine import PrivacyConfig, anonymize_dataframe, dataframe_to_csv_bytes
 
 
@@ -45,7 +45,10 @@ if uploaded_file is not None:
         config = PrivacyConfig.from_level(privacy_level.lower())
 
         try:
+            start_time = time.time()
             anonymized_df, l_report_df, metrics_df, utility_df = anonymize_dataframe(original_df, config)
+            execution_time = round(time.time() - start_time, 2)
+            st.write(f"Execution Time: {execution_time} seconds")
         except Exception as exc:
             st.error(f"Anonymization failed: {exc}")
             st.stop()
