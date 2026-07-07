@@ -30,6 +30,8 @@ if uploaded_file is not None:
 
     st.subheader("Original Data Preview")
     st.write(f"Total Records Uploaded: {len(original_df)}")
+    file_size_kb = round(uploaded_file.size / 1024, 2)
+    st.write(f"File Size: {file_size_kb} KB")
     st.write("### Data Quality Summary")
 
     missing_values = original_df.isnull().sum().sum()
