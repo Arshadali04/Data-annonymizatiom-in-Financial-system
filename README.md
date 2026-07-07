@@ -50,6 +50,21 @@ Financial datasets often contain personally identifiable information (PII) and s
 
 ---
 
+## 🔐 Security Features
+
+- 🔐 **SHA-256 Based Pseudonymization:** Secures high-risk identifiers with deterministic hashing.
+- 📱 **Phone Number Masking:** Reveals only the last 4 digits of phone numbers.
+- 📧 **Email Tokenization:** Replaces email addresses with stable surrogate tokens.
+- 🪪 **Aadhaar Anonymization:** Protects Aadhaar numbers from direct exposure.
+- 💳 **Account Number Protection:** Masks or pseudonymizes account identifiers.
+- 🧾 **UPI Identifier Protection:** Secures UPI IDs during data transformation.
+- 🗺️ **Location Generalization:** Converts city-level values into broader location categories.
+- 📏 **K-Anonymity Enforcement:** Ensures each record remains indistinguishable within a minimum group size.
+- 🧠 **L-Diversity Validation:** Verifies sensitive attribute diversity across grouped records.
+- 📊 **Privacy Compliance Reporting:** Generates evidence of privacy controls and risk reduction.
+
+---
+
 ## 🛡️ Protected Data Fields
 
 The system automatically protects the following sensitive fields during anonymization:
