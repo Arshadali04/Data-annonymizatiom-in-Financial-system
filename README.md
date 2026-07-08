@@ -272,6 +272,15 @@ Your input CSV dataset must include the fields needed by the anonymization and v
 
 Datasets missing Age or Balance_INR will fail validation.
 
+## 🧪 Sample Input Dataset
+
+| Name | Age | Phone | Email | Balance_INR |
+|---|---|---|---|---|
+| Arshad | 21 | 9876543210 | arshad@gmail.com | 234567 |
+| Ali | 22 | 9123456789 | ali@gmail.com | 345678 |
+
+The system automatically anonymizes sensitive information while preserving analytical utility.
+
 ---
 
 ## 🔄 Before vs After Examples
