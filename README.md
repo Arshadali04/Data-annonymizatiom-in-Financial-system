@@ -33,6 +33,21 @@ Financial datasets often contain personally identifiable information (PII) and s
 
 ---
 
+## 🧾 Version Information
+
+### Current Version
+- v1.0
+
+### Major Features
+- K-Anonymity
+- L-Diversity
+- SHA-256 Pseudonymization
+- Data Utility Analysis
+- Streamlit Dashboard
+- Privacy Compliance Reporting
+
+---
+
 ## ✨ Key Features
 
 - 🔒 **K-Anonymity (K=10):** Generalizes age into ranges so each group has minimum record support.
