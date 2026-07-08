@@ -68,7 +68,6 @@ if uploaded_file is not None:
         Reports Generated: 4
         """
         )
-        
         st.info(
         """
             Generated Files:
@@ -78,6 +77,13 @@ if uploaded_file is not None:
             - l_diversity_report.csv
         """
         )
+        st.write("### Anonymization Summary")
+
+        protected_fields = len(anonymized_df.columns)
+
+        st.write(f"Protected Fields: {protected_fields}")
+        st.write(f"Privacy Reports Generated: 3")
+        
 
         st.subheader("Anonymized Data Preview")
         st.dataframe(anonymized_df.head(20), use_container_width=True)
