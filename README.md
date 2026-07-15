@@ -419,13 +419,13 @@ Example metrics typically reported:
 
 ---
 
-## ⚠️ Current Limitations
+## Known Limitations
 
-- Supports structured CSV datasets only.
-- City-to-state mapping is limited to predefined locations.
-- Differential Privacy is not yet implemented.
-- T-Closeness validation is not currently supported.
-- Large datasets may require additional optimization.
+1. K-Anonymity alone cannot prevent attribute disclosure.
+2. L-Diversity may not fully protect against skewness attacks.
+3. City mapping relies on predefined mappings.
+4. Large datasets may require performance optimization.
+5. Differential Privacy is not currently implemented.
 
 ## 🔮 Future Improvements
 
