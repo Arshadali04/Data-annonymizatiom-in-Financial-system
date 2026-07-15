@@ -100,6 +100,11 @@ if uploaded_file is not None:
             }
         )
         metrics = metrics_df.iloc[0].to_dict()
+        if "privacy_score" in metrics:
+            st.metric(
+                "Privacy Score",
+                f"{metrics['privacy_score']}%"
+            )
 
         col1, col2, col3 = st.columns(3)
         col1.metric("Total Records", int(metrics.get("total_records", 0)))
