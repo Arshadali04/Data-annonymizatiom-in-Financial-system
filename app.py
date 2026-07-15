@@ -24,6 +24,13 @@ else:
 if uploaded_file is not None:
     try:
         original_df = pd.read_csv(uploaded_file)
+        # Data Quality Check
+        if "Age" in original_df.columns:
+            invalid_age_count = original_df["Age"].isna().sum()
+
+            st.write(
+                f"Invalid/Missing Age Records: {invalid_age_count}"
+            )
     except Exception as exc:
         st.error(f"Unable to read file: {exc}")
         st.stop()
