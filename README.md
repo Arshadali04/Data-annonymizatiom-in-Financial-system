@@ -287,6 +287,16 @@ Your input CSV dataset must include the fields needed by the anonymization and v
 
 Datasets missing Age or Balance_INR will fail validation.
 
+## 📌 Assumptions
+
+The anonymization pipeline is designed with the following assumptions:
+
+- Input datasets are structured CSV files.
+- Age and Balance_INR fields are available.
+- Aadhaar numbers contain 12 digits.
+- Financial records are non-malicious and correctly formatted.
+- City names match supported mappings.
+
 ## 🧪 Sample Input Dataset
 
 | Name | Age | Phone | Email | Balance_INR |
