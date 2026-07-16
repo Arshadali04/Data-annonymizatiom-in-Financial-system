@@ -46,6 +46,17 @@ Financial datasets often contain personally identifiable information (PII) and s
 - Streamlit Dashboard
 - Privacy Compliance Reporting
 
+## 🛣️ Future Roadmap
+
+### Version 2.0 Goals
+- Differential Privacy
+- T-Closeness
+- Database Integration
+- REST API Support
+- Role-Based Access Control
+- Cloud Deployment
+- Real-Time Data Processing
+
 ---
 
 ## ✨ Key Features
