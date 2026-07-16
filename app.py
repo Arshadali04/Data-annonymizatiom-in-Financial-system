@@ -55,6 +55,7 @@ if uploaded_file is not None:
 
         try:
             start_time = time.time()
+            status = st.info("Processing dataset...")
             anonymized_df, l_report_df, metrics_df, utility_df = anonymize_dataframe(original_df, config)
             execution_time = round(time.time() - start_time, 2)
             st.write(f"Execution Time: {execution_time} seconds")
@@ -63,6 +64,7 @@ if uploaded_file is not None:
             st.stop()
 
         st.success("Anonymization completed")
+        status.success("Anonymization completed successfully")
         st.write("### Platform Capabilities")
 
         st.write( "Supported Privacy Techniques: 7")
