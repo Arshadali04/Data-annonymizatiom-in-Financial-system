@@ -63,7 +63,9 @@ if uploaded_file is not None:
             st.stop()
 
         st.success("Anonymization completed")
+        st.write("### Platform Capabilities")
 
+        st.write( "Supported Privacy Techniques: 7")
         st.write("### Processing Summary")
 
         st.success(
