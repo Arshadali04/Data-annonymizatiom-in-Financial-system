@@ -426,6 +426,20 @@ sequenceDiagram
 - `outputs/privacy_metrics.csv`
 - `outputs/data_utility_report.csv`
 
+## Generated Reports
+
+1. anonymized_bankdetails.csv
+  - Final anonymized dataset
+
+2. privacy_metrics.csv
+  - Privacy effectiveness metrics
+
+3. l_diversity_report.csv
+  - Group-level diversity validation
+
+4. data_utility_report.csv
+  - Utility preservation analysis
+
 Example metrics typically reported:
 - Total records processed
 - Records modified
