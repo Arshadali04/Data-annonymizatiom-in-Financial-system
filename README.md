@@ -372,6 +372,22 @@ Transforms identifiers via SHA-256-based logic to reduce direct exposure while r
 
 ---
 
+## Frequently Asked Questions
+
+### Why K-Anonymity?
+To reduce re-identification risk by ensuring records are indistinguishable from at least K-1 other records.
+
+### Why L-Diversity?
+To prevent attribute disclosure within anonymized groups.
+
+### Why Hashing?
+To securely pseudonymize identifiers while preserving consistency.
+
+### Why Generalization?
+To reduce uniqueness while maintaining analytical value.
+
+---
+
 ## 🖼️ Screenshots
 
 > Add real screenshots before final portfolio submission.
