@@ -9,7 +9,7 @@ from privacy_engine import PrivacyConfig, anonymize_dataframe, dataframe_to_csv_
 st.set_page_config(page_title="Financial Data Anonymizer", page_icon="🔐", layout="wide")
 
 st.title("Data Anonymization in Financial Systems")
-st.caption("Placement-ready privacy pipeline with k-anonymity, l-diversity, and utility analytics")
+st.caption("Version 1.0 | Financial Data Anonymization Platform")
 
 uploaded_file = st.file_uploader("Upload input CSV", type=["csv"])
 privacy_level = st.selectbox("Select privacy level", options=["Low", "Medium", "High"], index=1)
